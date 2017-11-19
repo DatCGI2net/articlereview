@@ -1,0 +1,12 @@
+Hello {{user.username}}
+
+Please review the article below to approve it in due course:
+title:{{article.title}}
+url:{{article.url}}
+desc:{{article.description}}
+
+{{article.get_absolute_url}}
+
+Regards,
+
+Site manager.

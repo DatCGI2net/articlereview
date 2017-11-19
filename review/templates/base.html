@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<bodY>
+<nav>
+<ul>
+{%if user.is_authenticated %}
+
+<li><a title="Add article" href="{% url 'article-create' %}">Assign Aritcle</a></li>
+<li><a  title="list article"  href="{% url 'article-list' %}">List Aritcle</a></li>
+
+<li><a title="logout" href="/logout/">User: {{user.name}} logout</a>
+</li>
+{%else%}
+<li><a title="login" href="{% url 'login'%}">User is not login</a>
+{%endif%}
+</ul>
+</nav>
+{% block content %}
+
+
+
+{%endblock%}
+</bodY>
+</html>

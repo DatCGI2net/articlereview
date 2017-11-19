@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Here we go</h1>
+<ul>
+{%for item in object_list %}
+
+<li>{{item.title}} - ({%if item.is_approved == False%}Not approved yet){%endif%} <a href="{% url 'article-edit' item.id %}">Edit</a></li>
+
+{%endfor%}
+</ul>
+
+{% endblock %}
